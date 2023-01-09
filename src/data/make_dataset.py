@@ -2,12 +2,12 @@
 import logging
 from os import listdir
 from pathlib import Path
-from mnist import mnist
 
 import click
 import numpy as np
 import torch
 from dotenv import find_dotenv, load_dotenv
+from mnist import mnist
 
 
 @click.command()

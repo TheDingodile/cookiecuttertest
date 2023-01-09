@@ -1,7 +1,9 @@
-import numpy as np
-from os import listdir
 import logging
+from os import listdir
+
+import numpy as np
 import torch
+
 
 def mnist(input_path: str):
     logger = logging.getLogger(__name__)

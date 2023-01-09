@@ -1,9 +1,12 @@
-from tests import _PATH_DATA, _PROJECT_ROOT
+import os.path
+
+import pytest
 import torch
+
 from src.data.mnist import load
 from src.models.predict_model import MyAwesomeModel
-import os.path
-import pytest
+from tests import _PATH_DATA, _PROJECT_ROOT
+
 
 @pytest.mark.skipif(not (os.path.exists(_PROJECT_ROOT + "/models/trained_model.pt") and os.path.exists(_PATH_DATA))
 , reason="Data files not found")

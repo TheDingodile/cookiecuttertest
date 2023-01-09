@@ -1,7 +1,9 @@
-from tests import _PATH_DATA, _PROJECT_ROOT
-from src.data.mnist import load
 import os.path
+
 import pytest
+
+from src.data.mnist import load
+from tests import _PATH_DATA, _PROJECT_ROOT
 
 
 @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")

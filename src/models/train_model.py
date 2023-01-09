@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import torch
 from predict_model import MyAwesomeModel
+
 from src.data.mnist import load
 
 model = MyAwesomeModel()
