@@ -1,4 +1,4 @@
-name: "Sort"
+name: "flake8"
 
 on:
   push:
