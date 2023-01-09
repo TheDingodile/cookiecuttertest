@@ -25,4 +25,5 @@ jobs:
         pip install -r requirements_tests.txt
         pip install flake8
     - name: test linesize
-        flake8
+      run: |
+          flake8

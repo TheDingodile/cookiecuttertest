@@ -25,4 +25,5 @@ jobs:
         pip install -r requirements_tests.txt
         pip install isort
     - name: Sort code
+      run: |
         isort .
