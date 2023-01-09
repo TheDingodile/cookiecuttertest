@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import torch
 from predict_model import MyAwesomeModel
 from src.data.mnist import load
-print("hello")
+
 model = MyAwesomeModel()
 input_train, labels_train, _, _ = load("data/processed")
 all_loss = []
