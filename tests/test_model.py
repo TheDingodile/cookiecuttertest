@@ -5,7 +5,8 @@ from src.models.predict_model import MyAwesomeModel
 import os.path
 import pytest
 
-@pytest.mark.skipif(not os.path.exists(_PROJECT_ROOT + "/models/trained_model.pt"), reason="Data files not found")
+@pytest.mark.skipif(not (os.path.exists(_PROJECT_ROOT + "/models/trained_model.pt") and os.path.exists(_PATH_DATA))
+, reason="Data files not found")
 def test_output_size():
     input_train, labels_train, test_inputs, test_labels = load(input_path=_PATH_DATA +"/processed")
     a: MyAwesomeModel = MyAwesomeModel()

@@ -4,7 +4,7 @@ import os.path
 import pytest
 
 
-@pytest.mark.skipif(not os.path.exists(_PATH_DATA ), reason="Data files not found")
+@pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 def test_data_size():
     input_train, labels_train, test_inputs, test_labels = load(input_path="data/processed")
     assert len(input_train) == 25000
