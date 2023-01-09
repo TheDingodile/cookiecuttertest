@@ -1,11 +1,12 @@
-from tests import _PATH_DATA
+from tests import _PATH_DATA, _PROJECT_ROOT
 from src.data.mnist import load
+import os.path
+import pytest
 
 
-input_train, labels_train, test_inputs, test_labels = load(input_path="data/processed")
-
-
+@pytest.mark.skipif(not os.path.exists(_PATH_DATA ), reason="Data files not found")
 def test_data_size():
+    input_train, labels_train, test_inputs, test_labels = load(input_path="data/processed")
     assert len(input_train) == 25000
     assert len(labels_train) == 25000
     assert len(test_inputs) == 5000
